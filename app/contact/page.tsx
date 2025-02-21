@@ -6,5 +6,4 @@ const ContactPage = () => {
     <ContactSection />
   )
 }
-
 export default ContactPage

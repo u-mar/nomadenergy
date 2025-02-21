@@ -12,7 +12,7 @@ const articles = [
   {
     title: "How Solar Panels Work: A Beginner's Guide",
     excerpt: "Understand the science behind solar panels and how they convert sunlight into electricity.",
-    link: "https://www.energy.gov/eere/solar/how-solar-works",
+    link: "https://www.energy.gov/eere/solar/how-does-solar-work",
     image: "/images/solar1.jpg",
   },
   {
@@ -36,13 +36,13 @@ const articles = [
   {
     title: "Solar Energy in Developing Countries: A Path to Energy Independence",
     excerpt: "See how solar power is transforming energy access in remote and underserved regions.",
-    link: "https://www.worldbank.org/en/topic/energy/brief/solar-energy",
+    link: "https://arka360.com/ros/solar-energy-developing-countries/",
     image: "/images/solar5.jpg",
   },
   {
     title: "The Economics of Solar Energy: Costs and Savings",
     excerpt: "Find out how solar energy systems can save money and provide long-term financial benefits.",
-    link: "https://www.nrel.gov/analysis/solar-costs.html",
+    link: "https://tamesol.com/economics-of-solar-power/",
     image: "/images/solar6.jpg",
   },
 ];

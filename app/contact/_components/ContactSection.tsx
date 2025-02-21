@@ -2,19 +2,23 @@ import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { oswald } from "@/app/fonts"
-
+import ContactForm from "@/components/features/contact"
 export default function ContactSection() {
  
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
       <div className="mb-16 text-center">
-        <h1 className={`my-28 text-4xl font-bold text-[#1B3B75] md:text-5xl lg:text-6xl ${oswald.className}`}>Contact Us</h1>
-        <p className="mx-auto my-24 text-start  max-w-6xl text-2xl text-black">
+        <h1 className={`my-1 text-4xl font-bold text-[#1B3B75] md:text-5xl lg:text-6xl ${oswald.className}`}>Contact Us</h1>
+        <p className="mx-auto my-11 text-start  max-w-6xl text-2xl text-black">
           Whether you're a prospective client seeking solar solutions for your business or a young individual searching
           for opportunities, don't hesitate to reach out to us. We're here to help.
         </p>
       </div>
+      <div className="justify-center items-center">
+        <ContactForm />
+      </div>
+
 
       {/* Contact Info and Images Grid */}
       <div className="grid gap-8 lg:grid-cols-2">
@@ -51,6 +55,7 @@ export default function ContactSection() {
             </div>
           </CardContent>
         </Card>
+
 
         {/* Images Grid */}
         <div className="grid gap-4 md:grid-cols-2">
