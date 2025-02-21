@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FaChevronDown } from "react-icons/fa";
 
-
 const menuItems = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US & PARTNERS", href: "/about" },
@@ -44,12 +43,14 @@ export default function Navbar() {
 
   return (
     <nav className="border-b">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+      <div className="container mx-auto h-20 flex items-center justify-between px-2">
+        {/* Logo */}
+        <div className="flex items-center">
           <Image src="/images/logo.png" alt="Nomad Energy Logo" width={120} height={40} className="h-auto w-[120px]" />
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center flex-1 justify-center space-x-8">
           {menuItems.map((item) => (
             <div
               key={item.label}
@@ -75,25 +76,31 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-        <Link href="contact">
-  <Button  className="bg-[#1e3a8a] hidden md:block">
-    CONNECT WITH US!!
-  </Button>
-</Link>
 
-        <div className="md:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-gray-500 focus:outline-none focus:text-gray-600">
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
+        {/* "Connect with Us" Button */}
+        <div className="flex items-center">
+          <Link href="/contact">
+            <Button className="bg-[#1e3a8a] px-6 py-2">
+              CONNECT WITH US!!
+            </Button>
+          </Link>
         </div>
       </div>
 
+      {/* Mobile Menu Toggle */}
+      <div className="md:hidden flex items-center justify-between p-4">
+        <button onClick={toggleMenu} className="text-gray-500 focus:outline-none focus:text-gray-600">
+          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden flex flex-col items-center gap-4 mt-4">
+        <div className="md:hidden flex flex-col items-center gap-6 mt-4">
           {menuItems.map((item) => (
-            <div key={item.label} className="flex flex-col items-center">
+            <div key={item.label} className="flex flex-col items-center space-y-4">
               <Link href={item.href ?? "#"} className="text-sm font-medium">
                 {item.label}
               </Link>

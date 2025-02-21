@@ -46,13 +46,13 @@ export default function Footer() {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <Link href="/services/solar" className="block px-4 py-2 hover:bg-gray-200">Solar Services</Link>
-                <Link href="/services/agriculture" className="block px-4 py-2 hover:bg-gray-200">Agriculture Services</Link>
+                <Link href="/services" className="block px-4 py-2 hover:bg-gray-200">Solar Services</Link>
+                <Link href="/services/agriculture-services" className="block px-4 py-2 hover:bg-gray-200">Agriculture Services</Link>
               </div>
             )}
           </div>
 
-          <Link href="/clients" className="hover:text-gray-900">Clients</Link>
+          <Link href="/partners" className="hover:text-gray-900">Clients</Link>
           <Link href="/contact" className="hover:text-gray-900">Contact Us</Link>
         </nav>
       </div>
