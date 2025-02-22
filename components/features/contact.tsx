@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { z } from "zod";
 import { send } from "@/lib/email";
+import { toast } from "sonner"; // Import sonner toast
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -22,8 +23,13 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    send(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      send(values); // Call the server-side function to send emails and store the message in Supabase
+      toast.success("Message sent successfully!");
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
   }
 
   return (
