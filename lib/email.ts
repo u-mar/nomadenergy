@@ -24,7 +24,7 @@ export const send = async (emailFormData: z.infer<typeof formSchema>) => {
 
     await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL!,
-      to: 'info@nomadenergy.net',
+      to: 'eylstocks@gmail.com',
       subject: 'New Contact Form Submission',
       html: `<p>Name: ${emailFormData.firstName}<br/>Email: ${emailFormData.email}<br/>Message: ${emailFormData.message}</p>`
       });
