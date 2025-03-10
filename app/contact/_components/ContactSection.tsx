@@ -41,8 +41,8 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-gray-300" />
-              <a href="tel:+252906904702" className="hover:text-gray-300">
-                (252) 906-90-7402
+              <a href="tel:+25290690702" className="hover:text-gray-300">
+                +252 906 904 702 
               </a>
               </div>
 
