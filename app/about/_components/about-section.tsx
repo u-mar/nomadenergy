@@ -53,7 +53,7 @@ export default function AboutSection() {
         <h1
           className={`my-20 text-4xl text-center font-bold text-[#1e3a8a] md:text-4xl lg:text-5xl ${oswald.className}`}
         >
-          About Us & Partners
+          About Us
         </h1>
 
         <div className="grid gap-12">

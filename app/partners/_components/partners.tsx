@@ -58,7 +58,7 @@ export default function PartnerSection() {
 
         {/* Secondary Partners Grid */}
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {["/images/roof.png", "/images/scrc.jpg", "/images/roof.png", "/images/roof2.png"].map((src, index) => (
+          {["/images/roof.png", "/images/scrc.jpg", "/images/roof7.png", "/images/roof2.png"].map((src, index) => (
             <div key={index} className={`flex ${index % 2 === 0 ? 'items-end' : 'items-start'} transform hover:scale-105 transition-all duration-300`}>
               <Image
                 src={src}
@@ -90,8 +90,8 @@ export default function PartnerSection() {
             <Image
               src="/images/tech.png"
               alt="Solar Array Diagram"
-              width={300}
-              height={200}
+              width={350}
+              height={450}
               className="rounded-lg transform hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -103,8 +103,8 @@ export default function PartnerSection() {
             <Image
               src="/images/tech2.png"
               alt="Solar Array Diagram"
-              width={300}
-              height={200}
+              width={350}
+              height={450}
               className="rounded-tl-full transform hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -124,7 +124,7 @@ export default function PartnerSection() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="w-full md:w-1/2 h-auto">
               <video
-                src="https://nomadenergy.net/wp-content/uploads/2024/11/NE-PROMO-2.mov"
+                src="/images/NE-PROMO-2.mp4"
                 controls
                 className="w-full h-auto rounded-lg shadow-lg"
               ></video>

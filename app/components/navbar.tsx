@@ -7,7 +7,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 const menuItems = [
   { label: "HOME", href: "/" },
-  { label: "ABOUT US & PARTNERS", href: "/about" },
+  { label: "ABOUT US", href: "/about" },
   {
     label: "SERVICES",
     subItems: [
